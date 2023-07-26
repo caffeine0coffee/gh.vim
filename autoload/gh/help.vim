@@ -162,5 +162,5 @@ endfunction
 
 function! gh#help#set_keymap(type) abort
   exe printf('noremap <buffer> <silent> <Plug>(gh-help) :<C-u>call gh#help#keymap("%s")<CR>', a:type)
-  nmap <buffer> <silent> ghh <Plug>(gh-help)
+  "nmap <buffer> <silent> ghh <Plug>(gh-help)
 endfunction

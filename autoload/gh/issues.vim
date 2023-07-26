@@ -103,14 +103,14 @@ function! s:set_issue_list(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_issue_edit_title) :<C-u>call <SID>edit_issue_title()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_issue_url_yank) :<C-u>call <SID>issue_url_yank()<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_issue_open_browser)
-  nmap <buffer> <silent> ghe   <Plug>(gh_issue_edit)
-  nmap <buffer> <silent> ghc   <Plug>(gh_issue_close)
-  nmap <buffer> <silent> gho   <Plug>(gh_issue_open)
-  nmap <buffer> <silent> ghm   <Plug>(gh_issue_open_comment)
-  nmap <buffer> <silent> ghn   <Plug>(gh_issue_new)
-  nmap <buffer> <silent> ghr   <Plug>(gh_issue_edit_title)
-  nmap <buffer> <silent> ghy   <Plug>(gh_issue_url_yank)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_issue_open_browser)
+  "nmap <buffer> <silent> ghe   <Plug>(gh_issue_edit)
+  "nmap <buffer> <silent> ghc   <Plug>(gh_issue_close)
+  "nmap <buffer> <silent> gho   <Plug>(gh_issue_open)
+  "nmap <buffer> <silent> ghm   <Plug>(gh_issue_open_comment)
+  "nmap <buffer> <silent> ghn   <Plug>(gh_issue_new)
+  "nmap <buffer> <silent> ghr   <Plug>(gh_issue_edit_title)
+  "nmap <buffer> <silent> ghy   <Plug>(gh_issue_url_yank)
   call gh#help#set_keymap('issues')
 
   call gh#provider#preview#open(function('s:get_preview_info'))
@@ -411,7 +411,7 @@ function! s:set_issues_body(resp) abort
   setlocal nomodified buftype=acwrite ft=markdown
 
   nnoremap <buffer> <silent> <Plug>(gh_issue_comment_open_on_issue) :<C-u>call <SID>comments_open_on_issue()<CR>
-  nmap <buffer> <silent> ghm <Plug>(gh_issue_comment_open_on_issue)
+  "nmap <buffer> <silent> ghm <Plug>(gh_issue_comment_open_on_issue)
 
   nnoremap <buffer> <silent> q :q<CR>
 
@@ -470,8 +470,8 @@ function! gh#issues#comments() abort
 
   nnoremap <buffer> <silent> <Plug>(gh_issue_comment_new) :<C-u>call <SID>issue_comment_new()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_issue_comment_edit) :<C-u>call <SID>issue_comment_edit()<CR>
-  nmap <buffer> <silent> ghn <Plug>(gh_issue_comment_new)
-  nmap <buffer> <silent> ghe <Plug>(gh_issue_comment_edit)
+  "nmap <buffer> <silent> ghn <Plug>(gh_issue_comment_new)
+  "nmap <buffer> <silent> ghe <Plug>(gh_issue_comment_edit)
 
   call gh#github#issues#comments(b:gh_comment_list.repo.owner, b:gh_comment_list.repo.name, b:gh_comment_list.number, b:gh_comment_list.param)
         \.then(function('s:set_issue_comments_body'))
@@ -546,8 +546,8 @@ function! s:set_issue_comments_body(resp) abort
 
   nnoremap <buffer> <silent> <Plug>(gh_issue_comment_open_browser) :<C-u>call <SID>issue_comment_open_browser()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_issue_comment_url_yank) :<C-u>call <SID>issue_comment_url_yank()<CR>
-  nmap <buffer> <silent> <C-o> <Plug>(gh_issue_comment_open_browser)
-  nmap <buffer> <silent> ghy <Plug>(gh_issue_comment_url_yank)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_issue_comment_open_browser)
+  "nmap <buffer> <silent> ghy <Plug>(gh_issue_comment_url_yank)
   call gh#help#set_keymap('issue-comments')
 
   call gh#provider#preview#open(function('s:get_comment_preview_info'))

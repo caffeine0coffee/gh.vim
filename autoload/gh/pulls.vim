@@ -48,11 +48,11 @@ function! s:set_pull_list(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_pull_url_yank) :<C-u>call <SID>pull_url_yank()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_pull_merge) :<C-u>call <SID>select_merge_method()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_pull_review) :<C-u>call <SID>open_review_window()<CR>
-  nmap <buffer> <silent> <C-o> <Plug>(gh_pull_open_browser)
-  nmap <buffer> <silent> ghd <Plug>(gh_pull_diff)
-  nmap <buffer> <silent> ghy <Plug>(gh_pull_url_yank)
-  nmap <buffer> <silent> ghm <Plug>(gh_pull_merge)
-  nmap <buffer> <silent> ghr <Plug>(gh_pull_review)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_pull_open_browser)
+  "nmap <buffer> <silent> ghd <Plug>(gh_pull_diff)
+  "nmap <buffer> <silent> ghy <Plug>(gh_pull_url_yank)
+  "nmap <buffer> <silent> ghm <Plug>(gh_pull_merge)
+  "nmap <buffer> <silent> ghr <Plug>(gh_pull_review)
   call gh#help#set_keymap('pulls')
 endfunction
 

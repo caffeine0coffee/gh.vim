@@ -10,7 +10,7 @@ function! gh#bookmark#list() abort
   setlocal ft=gh-bookmarks
 
   nnoremap <buffer> <silent> <Plug>(gh_bookmark_open) :<C-u>call <SID>bookmark_open()<CR>
-  nmap <buffer> <silent> gho <Plug>(gh_bookmark_open)
+  "nmap <buffer> <silent> gho <Plug>(gh_bookmark_open)
 
   call gh#help#set_keymap('bookmark')
 

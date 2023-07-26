@@ -18,7 +18,7 @@ function! gh#provider#preview#open(get_preview_info) abort
   nnoremap <buffer> <silent> <Plug>(gh_preview_move_up) :call <SID>scroll_popup('up')<CR>
   nnoremap <buffer> <silent> <Plug>(gh_preview_toggle) :call <SID>toggle_preview()<CR>
 
-  nmap <buffer> <silent> ghp <Plug>(gh_preview_toggle)
+  "nmap <buffer> <silent> ghp <Plug>(gh_preview_toggle)
 endfunction
 
 function! gh#provider#preview#update(get_preview_info) abort
@@ -46,8 +46,8 @@ function! s:enable_preview() abort
     au CursorMoved <buffer> call gh#provider#preview#update(b:gh_preview_updatefunc)
   augroup END
 
-  nmap <buffer> <silent> <C-n> <Plug>(gh_preview_move_down)
-  nmap <buffer> <silent> <C-p> <Plug>(gh_preview_move_up)
+  "nmap <buffer> <silent> <C-n> <Plug>(gh_preview_move_down)
+  "nmap <buffer> <silent> <C-p> <Plug>(gh_preview_move_up)
   call s:open_preview()
 
   let b:gh_preview_enable = 1
@@ -58,8 +58,8 @@ function! s:disable_preview() abort
 
   exe printf('augroup gh-preview-%d', bufnr()) | au! | augroup END
 
-  unmap <buffer> <C-n>
-  unmap <buffer> <C-p>
+  u"nmap <buffer> <C-n>
+  u"nmap <buffer> <C-p>
 
   let b:gh_preview_enable = 0
 endfunction

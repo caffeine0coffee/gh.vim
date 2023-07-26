@@ -69,10 +69,10 @@ function! s:set_keymap() abort
   nnoremap <buffer> <silent> <Plug>(gh_gist_list_open_browser) :call <SID>yank_or_open_gists_url('open')<CR>
   nnoremap <buffer> <silent> <Plug>(gh_gist_edit_file) :call <SID>edit_gist_file()<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_gist_list_open_browser)
-  nmap <buffer> <silent> ghy   <Plug>(gh_gist_list_yank)
-  nmap <buffer> <silent> ghf   <Plug>(gh_gist_list_fetch)
-  nmap <buffer> <silent> ghe   <Plug>(gh_gist_edit_file)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_gist_list_open_browser)
+  "nmap <buffer> <silent> ghy   <Plug>(gh_gist_list_yank)
+  "nmap <buffer> <silent> ghf   <Plug>(gh_gist_list_fetch)
+  "nmap <buffer> <silent> ghe   <Plug>(gh_gist_edit_file)
 
   call gh#help#set_keymap('gists')
 endfunction
@@ -230,9 +230,9 @@ function! s:set_gist(gist) abort
   nnoremap <buffer> <silent> <Plug>(gh_gist_list_open_browser) :call <SID>yank_or_open_gists_url('open')<CR>
   nnoremap <buffer> <silent> <Plug>(gh_gist_edit_file) :call <SID>edit_gist_file()<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_gist_list_open_browser)
-  nmap <buffer> <silent> ghy   <Plug>(gh_gist_list_yank)
-  nmap <buffer> <silent> ghe   <Plug>(gh_gist_edit_file)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_gist_list_open_browser)
+  "nmap <buffer> <silent> ghy   <Plug>(gh_gist_list_yank)
+  "nmap <buffer> <silent> ghe   <Plug>(gh_gist_edit_file)
 
   call gh#help#set_keymap('gist')
 endfunction

@@ -44,8 +44,8 @@ endfunction
 function! s:set_repo_list(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_repo_list_next) :<C-u>call <SID>repo_list_change_page('+')<CR>
   nnoremap <buffer> <silent> <Plug>(gh_repo_list_prev) :<C-u>call <SID>repo_list_change_page('-')<CR>
-  nmap <buffer> <silent> <C-l> <Plug>(gh_repo_list_next)
-  nmap <buffer> <silent> <C-h> <Plug>(gh_repo_list_prev)
+  "nmap <buffer> <silent> <C-l> <Plug>(gh_repo_list_next)
+  "nmap <buffer> <silent> <C-h> <Plug>(gh_repo_list_prev)
 
   if empty(a:resp.body)
     call gh#gh#set_message_buf('not found repositories')
@@ -70,8 +70,8 @@ function! s:set_repo_list(resp) abort
 
   nnoremap <buffer> <silent> <Plug>(gh_repo_open_browser) :<C-u>call <SID>repo_open()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_repo_show_readme) :<C-u>call <SID>repo_open_readme()<CR>
-  nmap <buffer> <silent> <C-o> <Plug>(gh_repo_open_browser)
-  nmap <buffer> <silent> gho <Plug>(gh_repo_show_readme)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_repo_open_browser)
+  "nmap <buffer> <silent> gho <Plug>(gh_repo_show_readme)
   call gh#help#set_keymap('repos')
 endfunction
 
@@ -125,7 +125,7 @@ function! s:set_readme_content(body) abort
   setlocal ft=markdown
 
   nnoremap <buffer> <silent> <Plug>(gh_repo_open_browser_on_readme) :<C-u>call <SID>repo_open_on_readme()<CR>
-  nmap <buffer> <silent> <C-o> <Plug>(gh_repo_open_browser_on_readme)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_repo_open_browser_on_readme)
 endfunction
 
 function! s:repo_open_on_readme() abort

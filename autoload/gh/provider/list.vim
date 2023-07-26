@@ -42,10 +42,10 @@ function! s:init_keymap() abort
   nnoremap <buffer> <silent> <Plug>(gh_list_prev_page) :<C-u>call <SID>prev_page()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_list_next_page) :<C-u>call <SID>next_page()<CR>
 
-  nmap <buffer> <silent> <C-j> <Plug>(gh_list_mark_down)
-  nmap <buffer> <silent> <C-k> <Plug>(gh_list_mark_up)
-  nmap <buffer> <silent> <C-h> <Plug>(gh_list_prev_page)
-  nmap <buffer> <silent> <C-l> <Plug>(gh_list_next_page)
+  "nmap <buffer> <silent> <C-j> <Plug>(gh_list_mark_down)
+  "nmap <buffer> <silent> <C-k> <Plug>(gh_list_mark_up)
+  "nmap <buffer> <silent> <C-h> <Plug>(gh_list_prev_page)
+  "nmap <buffer> <silent> <C-l> <Plug>(gh_list_next_page)
 endfunction
 
 function! s:get_page() abort

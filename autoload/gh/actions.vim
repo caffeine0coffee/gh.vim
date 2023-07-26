@@ -55,9 +55,9 @@ function! s:set_action_list(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_actions_yank_url) :call <SID>yank_url()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_actions_open_logs) :call <SID>open_logs()<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_actions_open_browser)
-  nmap <buffer> <silent> ghy <Plug>(gh_actions_yank_url)
-  nmap <buffer> <silent> gho <Plug>(gh_actions_open_logs)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_actions_open_browser)
+  "nmap <buffer> <silent> ghy <Plug>(gh_actions_yank_url)
+  "nmap <buffer> <silent> gho <Plug>(gh_actions_open_logs)
   call gh#help#set_keymap('actions')
 endfunction
 

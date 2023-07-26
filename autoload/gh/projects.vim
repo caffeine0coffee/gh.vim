@@ -93,9 +93,9 @@ function! s:set_project_list_result(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_project_url_yank) :<C-u>call <SID>project_url_yank()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_project_open) :<C-u>call <SID>project_open()<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_project_open_browser)
-  nmap <buffer> <silent> <CR> <Plug>(gh_project_open)
-  nmap <buffer> <silent> ghy <Plug>(gh_project_url_yank)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_project_open_browser)
+  "nmap <buffer> <silent> <CR> <Plug>(gh_project_open)
+  "nmap <buffer> <silent> ghy <Plug>(gh_project_url_yank)
   call gh#help#set_keymap('projects')
 endfunction
 
@@ -341,12 +341,12 @@ function! s:set_project_column_list(resp) abort
   nnoremap <buffer> <silent> <Plug>(gh_projects_card_close) :call <SID>set_card_state('closed')<CR>
   nnoremap <buffer> <silent> <Plug>(gh_projects_card_open) :call <SID>set_card_state('open')<CR>
 
-  nmap <buffer> <silent> <C-o> <Plug>(gh_projects_card_open_browser)
-  nmap <buffer> <silent> ghe <Plug>(gh_projects_card_edit)
-  nmap <buffer> <silent> ghm <Plug>(gh_projects_card_move)
-  nmap <buffer> <silent> ghy <Plug>(gh_projects_card_url_yank)
-  nmap <buffer> <silent> ghc <Plug>(gh_projects_card_close)
-  nmap <buffer> <silent> gho <Plug>(gh_projects_card_open)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_projects_card_open_browser)
+  "nmap <buffer> <silent> ghe <Plug>(gh_projects_card_edit)
+  "nmap <buffer> <silent> ghm <Plug>(gh_projects_card_move)
+  "nmap <buffer> <silent> ghy <Plug>(gh_projects_card_url_yank)
+  "nmap <buffer> <silent> ghc <Plug>(gh_projects_card_close)
+  "nmap <buffer> <silent> gho <Plug>(gh_projects_card_open)
   call gh#help#set_keymap('project-columns')
 endfunction
 

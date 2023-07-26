@@ -82,9 +82,9 @@ function! s:set_keymap() abort
   nnoremap <buffer> <silent> <Plug>(gh_files_edit) :call <SID>edit_file()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_files_yank_url) :call <SID>files_yank_url()<CR>
   nnoremap <buffer> <silent> <Plug>(gh_files_open_browser) :call <SID>files_open_browser()<CR>
-  nmap <buffer> <silent> ghe <Plug>(gh_files_edit)
-  nmap <buffer> <silent> ghy <Plug>(gh_files_yank_url)
-  nmap <buffer> <silent> <C-o> <Plug>(gh_files_open_browser)
+  "nmap <buffer> <silent> ghe <Plug>(gh_files_edit)
+  "nmap <buffer> <silent> ghy <Plug>(gh_files_yank_url)
+  "nmap <buffer> <silent> <C-o> <Plug>(gh_files_open_browser)
 
   call gh#help#set_keymap('files')
 endfunction

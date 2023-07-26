@@ -81,7 +81,7 @@ function! gh#provider#quickpick#open(opt) abort
     nnoremap <buffer><silent> <Plug>(gh-quickfix-select) :<C-u>call <SID>on_select(0)<CR>
     if !hasmapto('<Plug>(gh-quickfix-select)')
       imap <buffer><C-i> <Plug>(gh-quickfix-select)
-      nmap <buffer><C-i> <Plug>(gh-quickfix-select)
+      "nmap <buffer><C-i> <Plug>(gh-quickfix-select)
     endif
   endif
 
@@ -89,7 +89,7 @@ function! gh#provider#quickpick#open(opt) abort
 
   if !hasmapto('<Plug>(gh-quickfix-accept)')
     imap <buffer><cr> <Plug>(gh-quickfix-accept)
-    nmap <buffer><cr> <Plug>(gh-quickfix-accept)
+    "nmap <buffer><cr> <Plug>(gh-quickfix-accept)
   endif
 
   if !hasmapto('<Plug>(gh-quickfix-cancel)')
@@ -101,16 +101,16 @@ function! gh#provider#quickpick#open(opt) abort
 
   if !hasmapto('<Plug>(gh-quickfix-move-next)')
     imap <silent> <buffer> <C-n> <Plug>(gh-quickfix-move-next)
-    nmap <silent> <buffer> <C-n> <Plug>(gh-quickfix-move-next)
+    "nmap <silent> <buffer> <C-n> <Plug>(gh-quickfix-move-next)
     imap <silent> <buffer> <C-j> <Plug>(gh-quickfix-move-next)
-    nmap <silent> <buffer> <C-j> <Plug>(gh-quickfix-move-next)
+    "nmap <silent> <buffer> <C-j> <Plug>(gh-quickfix-move-next)
   endif
 
   if !hasmapto('<Plug>(gh-quickfix-move-previous)')
     imap <silent> <buffer> <C-p> <Plug>(gh-quickfix-move-previous)
-    nmap <silent> <buffer> <C-p> <Plug>(gh-quickfix-move-previous)
+    "nmap <silent> <buffer> <C-p> <Plug>(gh-quickfix-move-previous)
     imap <silent> <buffer> <C-k> <Plug>(gh-quickfix-move-previous)
-    nmap <silent> <buffer> <C-k> <Plug>(gh-quickfix-move-previous)
+    "nmap <silent> <buffer> <C-k> <Plug>(gh-quickfix-move-previous)
   endif
 
   call cursor(line('$'), 0)
